@@ -30,7 +30,7 @@ public class UserRegistrationPage {
 
 		driver.findElement(By.linkText("CADASTRE-SE")).click();
 		driver.findElement(By.id("email")).sendKeys(emailFaker);
-		driver.findElement(By.id("cpf")).sendKeys("175.744.950-76");
+		driver.findElement(By.id("cpf")).sendKeys("246.870.700-19");
 		driver.findElement(By.id("name")).sendKeys("Teste Selenium Adalberto");
 		driver.findElement(By.id("data_nascimento")).sendKeys("24/04/1990");
 		driver.findElement(By.id("password")).sendKeys("mad321654");
