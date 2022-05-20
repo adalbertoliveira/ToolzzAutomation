@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import com.github.javafaker.Faker;
 
+import support.GeraCpf;
+
 public class UserRegistrationPage {
 
 	WebDriver driver;
@@ -27,10 +29,14 @@ public class UserRegistrationPage {
 	}
 
 	public void userRegistration() {
+		
+		GeraCpf geraCpf = new GeraCpf();
+		String cpf = geraCpf.cpf();
+		
 
 		driver.findElement(By.linkText("CADASTRE-SE")).click();
 		driver.findElement(By.id("email")).sendKeys(emailFaker);
-		driver.findElement(By.id("cpf")).sendKeys("246.870.700-19");
+		driver.findElement(By.id("cpf")).sendKeys(cpf);
 		driver.findElement(By.id("name")).sendKeys("Teste Selenium Adalberto");
 		driver.findElement(By.id("data_nascimento")).sendKeys("24/04/1990");
 		driver.findElement(By.id("password")).sendKeys("mad321654");
